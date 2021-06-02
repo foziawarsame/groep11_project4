@@ -1,0 +1,109 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <h1>
+        Search Page
+    </h1>
+    <p>
+        -------------------------------------------------------------------------------------------------------------
+    </p>
+    <form method="POST">
+        <label>Filter box:</label>
+        <input type="text" name="input">
+        <input type="submit" name="submit">
+        <select name="select">
+            <option value="Fragment">Fragment</option>
+            <option value="Hit">Hit</option>
+            <option value="Function">Function</option>
+            <option value="Micro-Organism">Micro-Organism</option>
+        </select>
+    </form>
+
+    <ul>
+        {% for f in fragment %}
+            <li>
+                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo{{ f[0] + 1000 }}">
+                    {{ f[1] }}
+                </button>
+                <div id="demo{{ f[0] + 1000 }}" class="collapse">
+                    {% for e in data %}
+                        {% if e[8] == f[0] %}
+                            <div>
+                                <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo{{ e[5] }}">
+                                    {{ e[4] }}
+                                </button>
+                                <div id="demo{{ e[5] }}" class="collapse">
+                                    <div>
+                                        <h3>
+                                            Accessie Code:
+                                        </h3>
+                                        <p>
+                                            {{ e[0] }}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            E-Value:
+                                        </h3>
+                                        <p>
+                                            {{ e[1] }}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Score:
+                                        </h3>
+                                         <p>
+                                            {{ e[2] }}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Identity:
+                                        </h3>
+                                        <p>
+                                            {{ e[3] }}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Eiwit_functie:
+                                        </h3>
+                                        <p>
+                                            {{ e[12] }}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Familie:
+                                        </h3>
+                                        <p>
+                                            {{ e[14] }}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Geslacht:
+                                        </h3>
+                                        <p>
+                                            {{ e[15] }}
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <h3>
+                                            Soort:
+                                        </h3>
+                                        <p>
+                                            {{ e[16] }}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
