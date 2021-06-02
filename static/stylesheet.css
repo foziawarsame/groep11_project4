@@ -1,0 +1,128 @@
+* {box-sizing: border-box;}
+
+.content {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  width: 40%;
+  padding: 20px 10px;
+  text-align: center;
+  background-color: #2f3c53;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("assets/background.png");
+  background-repeat: no-repeat;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #2f3c53;
+  padding: 10px 10px;
+  margin: 20px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #8fc4f5;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.button-content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+h3, h1{
+  color: #f1f1f1 !important;
+}
+
+.collapse{
+  margin: 10px !important;
+}
+
+.btn btn-info{
+  margin: 10px !important;
+}
+
+li{
+  margin: 5px;
+}
+
+.btn-info{
+  color: #2f3c53 !important;
+  background-color: lightpink !important;
+  width: 500px !important;
+}
+
+label{
+    color: #f1f1f1;
+}
+
+p{
+  color: #8fbbcd;
+}
+
+form{
+  margin-bottom: 25px;
+}
+
+ul{
+  list-style: none;
+}
