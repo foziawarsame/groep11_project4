@@ -5,8 +5,8 @@ from Bio import SeqIO, Entrez
 from Bio.Blast import NCBIWWW, NCBIXML
 import pandas as pd
 
-from tkinter import Tk
-from tkinter.filedialog import askopenfilename, askdirectory
+#from tkinter import Tk
+#from tkinter.filedialog import askopenfilename, askdirectory
 
 import mysql.connector
 
