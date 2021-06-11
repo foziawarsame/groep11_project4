@@ -11,20 +11,25 @@
 </head>
 <body>
 
+        <!-- The header of every page -->
     <div class="header">
       <a href="/" class="logo">
           <img src="static/assets/home.gif" alt="Home Page" width="100" height="100">
       </a>
       <div class="header-right">
         <a href="/search">
-            <img src="static/assets/search.gif" alt="Home Page" width="100" height="100">
+            <img src="static/assets/search.gif" alt="Search Page" width="100" height="100">
+        </a>
+        <a href="/graphs">
+            <img src="static/assets/graph.gif" alt="Graph Page" width="100" height="100">
         </a>
         <a href="/about">
-            <img src="static/assets/about.gif" alt="Home Page" width="100" height="100">
+            <img src="static/assets/about.gif" alt="About Page" width="100" height="100">
         </a>
       </div>
     </div>
 
+        <!-- Where the content of every page will show -->
     <div class="content">
         {% block content %}
         {% endblock %}
